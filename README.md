@@ -1,8 +1,10 @@
 ## Deployment Link
 
 Deploy your project on Netlify/GitHub pages/etc and put your deployed link here.
-Link:
-Wireframes link: https://www.figma.com/proto/WAmXdWdTjyXPh1oZcRSQsL/Mobile-Wireframe-UI-Kit-(Community)?node-id=8%3A44&scaling=min-zoom
+Link: https://shankar-lyric-finder-app.netlify.app/
+
+# Wireframes 
+link: https://www.figma.com/proto/WAmXdWdTjyXPh1oZcRSQsL/Mobile-Wireframe-UI-Kit-(Community)?node-id=8%3A44&scaling=min-zoom
 
 
 # Instruction
