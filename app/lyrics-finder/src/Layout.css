@@ -1,14 +1,7 @@
-.wrapper {
-    display: flex;
-  }
-
-/* *{
-    background-color: #1B252F;
-} */
 
 .container{
     display: flex;
-    min-height: 100vh;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 .primary{
     padding: 1%;
@@ -17,34 +10,37 @@
 }
 
 .header{
-    margin-left: 20%;
     font-size: xx-large;
     font-weight: bold;
+    margin-top: -1em;
 }
 
 .header .firsthalf{
+    text-align: left;
     color: #f1011e;
 }
 .header .secondhalf{
+    text-align: right;
     color: #42baeb;
     margin-top: -1em;
 }
 .nav-actions{
-    list-style: none;
+    display: flex;
+    flex-direction: column;
 }
+
 .btn{
-    width: 120px;
+    width: 180px;
     float: right;
     height: 45px;
-    margin: 6px;
+    margin: 20px;
+    margin-right: -40px;
     color: #999999;
-    font-size: large;
+    font-size: x-large;
     border: none;
-    /* padding: 9px; */
     border-radius: 24px;
-    /* margin-top: 20%; */
     background-color: #1B252F;
-
+    cursor: pointer;
 }
 .active, .btn:hover{
     color: #ffffff;
@@ -60,30 +56,32 @@
     background-color:#212F3C;
     outline: none;
 }
-.btn:visited{
-    background-color: #212F3C;
-}
-.btn:hover span:after {
-    opacity: 1;
-    right: 0;
-  }
 
 .profile-image{
     display: block;
-    margin-top: 50vh;
-    margin-left: 30%;
+    margin-top: 130%;
+    margin-left: auto;
+    margin-right: auto;
     color: #f1011e;
 }
 
 .footer{
-    margin-top: 40%;
-    font-weight: bolder;
+    margin-top: 35%;
+    font-weight: bold;
+    font-size: small;
+    display: flex;
+    /* flex-direction: row; */
 }
 .social{
+    margin-left: auto;
+    margin-right: auto;
     color: #ffffff;
 }
 .social-element{
     padding: 10px;
+}
+.copyright{
+    text-align: center;
 }
 .secondary{
     padding: 1%;
@@ -91,4 +89,25 @@
     flex: 1;
     background-color: #212F3C;
     color: #ffffff;
+}
+.search-page{
+    display: flex;
+}
+.search-view{
+    width: 30em;
+}
+.search-field{
+    width: 80%;
+    height: 35px;
+    margin: 9.8px 0 0;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    font-size: x-large;
+    padding-left: 20px;
+}
+
+.result-view{
+    background-color:#212F3C;
+ 
 }

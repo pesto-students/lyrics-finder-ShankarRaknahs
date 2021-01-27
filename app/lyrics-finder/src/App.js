@@ -1,12 +1,12 @@
 import './App.css';
-import Layout from './components/Layout';
-import Search from './pages/Search';
+import Layout from './Layout';
+import SearchPage from './pages/SearchPage';
 
 function App() {
   return (
     <section>
       <Layout>
-        <Search />
+        <SearchPage />
       </Layout>
     </section>
   );

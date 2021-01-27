@@ -1,17 +1,22 @@
+import React from 'react';
+import { FcHome, FcSearch } from 'react-icons/fc';
+
 const Navbar = () => {
   return (
-    <ul className='nav-actions'>
-      <li>
+    <section className='nav-actions'>
+      <span>
         <button className='btn'>
-          <span>Home </span>
+          <FcHome size={20} />
+          <span> Home </span>
         </button>
-      </li>
-      <li>
+      </span>
+      <span>
         <button className='btn active'>
-          <span>Search </span>
+          <FcSearch size={20} />
+          <span> Search </span>
         </button>
-      </li>
-    </ul>
+      </span>
+    </section>
   );
 };
 
