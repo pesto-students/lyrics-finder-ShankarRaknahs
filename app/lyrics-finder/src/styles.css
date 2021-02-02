@@ -1,0 +1,116 @@
+
+.container{
+    display: flex;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.primary{
+    padding: 1%;
+    background-color: #1B252F;
+    color: #ffffff;
+}
+
+.header{
+    font-size: xx-large;
+    font-weight: bold;
+    margin-top: -1em;
+}
+
+.header .firsthalf{
+    text-align: left;
+    color: #f1011e;
+}
+.header .secondhalf{
+    text-align: right;
+    color: #42baeb;
+    margin-top: -1em;
+}
+.nav-actions{
+    display: flex;
+    flex-direction: column;
+}
+
+.btn{
+    width: 180px;
+    float: left;
+    height: 45px;
+    margin: 10px;
+    margin-right: -40px;
+    color: #999999;
+    font-size: larger;
+    border: none;
+    border-radius: 24px;
+    background-color: #1B252F;
+    cursor: pointer;
+}
+.btn span{
+    margin-left: 10%;
+}
+.active, .btn:hover{
+    color: #ffffff;
+    background-color: #212F3C;
+    border: none;
+}
+
+.active, .btn:hover span {
+    padding-right: 25px;
+  }
+  
+.btn:focus{
+    background-color:#212F3C;
+    outline: none;
+}
+
+.profile-image{
+    display: block;
+    margin-top: 130%;
+    margin-left: auto;
+    margin-right: auto;
+    color: #f1011e;
+}
+
+.footer{
+    margin-top: 35%;
+    font-weight: bold;
+    font-size: small;
+    display: flex;
+    /* flex-direction: row; */
+}
+.social{
+    margin-left: auto;
+    margin-right: auto;
+    color: #ffffff;
+}
+.social-element{
+    padding: 10px;
+}
+.copyright{
+    text-align: center;
+}
+.secondary{
+    padding: 1%;
+    display: flex;
+    flex: 1;
+    background-color: #212F3C;
+    color: #ffffff;
+}
+.search-page{
+    display: flex;
+}
+.search-view{
+    width: 30em;
+}
+.search-field{
+    width: 80%;
+    height: 35px;
+    margin: 9.8px 0 0;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    font-size: x-large;
+    padding-left: 20px;
+}
+
+.result-view{
+    background-color:#212F3C;
+ 
+}
