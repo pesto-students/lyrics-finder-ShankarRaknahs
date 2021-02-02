@@ -1,6 +1,6 @@
-import SearchBar from '../components/SearchBar';
+import SearchBar from '../components/Search/SearchBar';
 
-const Search = () => {
+const SearchView = () => {
   return (
     <section className='search-page'>
       <div className='search-view'>
@@ -11,4 +11,4 @@ const Search = () => {
   );
 };
 
-export default Search;
+export default SearchView;

@@ -1,13 +1,18 @@
 import './App.css';
-import Layout from './Layout';
-import SearchPage from './pages/SearchPage';
+import { BrowserRouter, Switch } from 'react-router-dom';
+import RouteWrapper from './components/Router/RouteWrapper';
+import HomeView from './views/HomeView';
+import SearchView from './views/SearchView';
 
 function App() {
   return (
     <section>
-      <Layout>
-        <SearchPage />
-      </Layout>
+      <BrowserRouter>
+        <Switch>
+          <RouteWrapper path='/search' component={<SearchView />} />
+          <RouteWrapper path='/' component={<HomeView />} />
+        </Switch>
+      </BrowserRouter>
     </section>
   );
 }

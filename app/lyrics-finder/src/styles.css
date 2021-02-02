@@ -31,16 +31,19 @@
 
 .btn{
     width: 180px;
-    float: right;
+    float: left;
     height: 45px;
-    margin: 20px;
+    margin: 10px;
     margin-right: -40px;
     color: #999999;
-    font-size: x-large;
+    font-size: larger;
     border: none;
     border-radius: 24px;
     background-color: #1B252F;
     cursor: pointer;
+}
+.btn span{
+    margin-left: 10%;
 }
 .active, .btn:hover{
     color: #ffffff;
