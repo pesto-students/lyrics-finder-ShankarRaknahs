@@ -7,7 +7,7 @@ const Navbar = ({ firstName, lastName }) => {
 
   React.useEffect(() => {
     document.title = `${firstName} ${lastName} | ${activeBtn}`;
-  }, [activeBtn]);
+  }, [activeBtn, firstName, lastName]);
 
   return (
     <section className='navbar'>
