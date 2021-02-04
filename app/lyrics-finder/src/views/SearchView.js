@@ -1,12 +1,9 @@
-import SearchBar from '../components/Search/SearchBar';
+import SearchQuery from '../components/Search/SearchQuery';
 
 const SearchView = () => {
   return (
-    <section className='search-page'>
-      <div className='search-view'>
-        <SearchBar />
-      </div>
-      <div className='result-view'></div>
+    <section className='search'>
+      <SearchQuery />
     </section>
   );
 };

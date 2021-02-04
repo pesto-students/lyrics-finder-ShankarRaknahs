@@ -8,13 +8,13 @@ const Footer = () => {
           href='https://www.linkedin.com/in/shankar-ganesan-4a443671/'
           className='social'
         >
-          <FaLinkedinIn className='social-element' />
+          <FaLinkedinIn className='image' />
         </a>
         <a href='https://github.com/ShankarRaknahs' className='social'>
-          <FaGithub className='social-element' />
+          <FaGithub className='image' />
         </a>
         <a href='https://github.com/ShankarRaknahs' className='social'>
-          <FaWhatsapp className='social-element' />
+          <FaWhatsapp className='image' />
         </a>
       </section>
 
