@@ -39,14 +39,13 @@ const SearchQuery = () => {
           placeholder='Search for Albums or Songs'
           onChange={handleInputChange}
         />
-        {searchObj.isLoading ? (
-          <p className='loader'> Loading ...</p>
-        ) : (
-          <ListData category='#Search Results' data={searchObj.data} />
-        )}
       </div>
       <div className='result'>
-        <h1>WIP - Lyric reader view</h1>
+        {searchObj.isLoading ? (
+          <p className='loader'> Loading ...</p>
+        ) : searchObj.data.length > 1 ? (
+          <ListData category='#Search Results' data={searchObj.data} />
+        ) : null}
       </div>
     </section>
   );

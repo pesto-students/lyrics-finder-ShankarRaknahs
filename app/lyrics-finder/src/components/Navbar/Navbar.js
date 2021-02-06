@@ -1,5 +1,6 @@
 import React from 'react';
-import { FcHome, FcSearch } from 'react-icons/fc';
+import { MdHome } from 'react-icons/md';
+import { AiOutlineFileSearch } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
 
 const Navbar = ({ firstName, lastName }) => {
@@ -17,7 +18,7 @@ const Navbar = ({ firstName, lastName }) => {
             className={activeBtn === 'Home' ? 'btn active' : 'btn'}
             onClick={() => setActiveBtn('Home')}
           >
-            <FcHome className='btn-icon' />
+            <MdHome className='btn-icon' size={20} />
             <span>Home</span>
           </button>
         </Link>
@@ -28,7 +29,7 @@ const Navbar = ({ firstName, lastName }) => {
             className={activeBtn === 'Search' ? 'btn active' : 'btn'}
             onClick={() => setActiveBtn('Search')}
           >
-            <FcSearch className='btn-icon' />
+            <AiOutlineFileSearch className='btn-icon' />
             <span>Search</span>
           </button>
         </Link>
