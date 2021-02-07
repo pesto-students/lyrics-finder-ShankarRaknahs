@@ -1,34 +1,49 @@
-import React from 'react';
+import { useState, useCallback } from 'react';
 import ListData from '../List/ListData';
 import _ from 'lodash';
+import getData from '../../api/getData';
+import CONFIG from '../../config/app.config';
 
 const SearchQuery = () => {
-  const API_PATH = 'https://api.lyrics.ovh/suggest/';
-  const [searchObj, setSearchObj] = React.useState({
+  const [searchObj, setSearchObj] = useState({
     query: '',
     data: [],
     isLoading: false,
   });
 
-  const handleInputChange = ({ target: { value } }) => {
-    setSearchObj({ isLoading: true }, debouncedFetchData(value));
+  const [apiStatus, setApiStatus] = useState({
+    code: CONFIG.HTTP_SUCCESS_CODE,
+    statusText: '',
+  });
+
+  const onSearch = ({ target: { value } }) => {
+    setSearchObj({ isLoading: true }, debouncedCallback(value));
+    setApiStatus({ code: CONFIG.HTTP_SUCCESS_CODE, statusText: '' });
   };
 
   const fetchData = (query) => {
-    const url = API_PATH + query;
-    query !== ''
-      ? fetch(url)
-          .then((response) => response.json())
-          .then((value) => {
-            setSearchObj({ data: value['data'], isLoading: false });
+    const url = new URL(query, CONFIG.SEARCH_API);
+    query.trim() !== ''
+      ? getData(url)
+          .then((suggestions) => {
+            setSearchObj({
+              query: query,
+              data: suggestions['data'],
+              isLoading: false,
+            });
           })
-      : setSearchObj({ data: [], isLoading: false });
+          .catch((error) => {
+            setSearchObj({
+              data: [],
+              isLoading: false,
+            });
+            setApiStatus({ code: error.status, statusText: error.statusText });
+          })
+      : setSearchObj({ query: query, data: [], isLoading: false });
   };
 
-  const debouncedFetchData = React.useCallback(
-    _.debounce((query) => fetchData(query), 1000),
-    []
-  );
+  const debounced = _.debounce(fetchData, CONFIG.SEARCH_DEBOUNCE_TIME);
+  const debouncedCallback = useCallback(debounced, []);
 
   return (
     <section className='search'>
@@ -37,16 +52,24 @@ const SearchQuery = () => {
           type='text'
           className='search-bar'
           placeholder='Search for Albums or Songs'
-          onChange={handleInputChange}
+          onChange={onSearch}
         />
       </div>
-      <div className='result'>
-        {searchObj.isLoading ? (
-          <p className='loader'> Loading ...</p>
-        ) : searchObj.data.length > 1 ? (
-          <ListData category='#Search Results' data={searchObj.data} />
-        ) : null}
-      </div>
+      {apiStatus.code === CONFIG.HTTP_SUCCESS_CODE ? (
+        <div className='result'>
+          {searchObj.isLoading ? (
+            <p className='loader'> Loading ...</p>
+          ) : searchObj.data.length > 0 ? (
+            <ListData category='#Search Results' data={searchObj.data} />
+          ) : searchObj.query !== '' ? (
+            <div> {CONFIG.NO_RESULT_FOUND} </div>
+          ) : null}
+        </div>
+      ) : (
+        <pre className='error-response'>{` ${CONFIG.ERROR_MESSAGES.apiError} 
+        ${apiStatus.code} - ${apiStatus.statusText} 
+        ${CONFIG.ERROR_MESSAGES.action}`}</pre>
+      )}
     </section>
   );
 };

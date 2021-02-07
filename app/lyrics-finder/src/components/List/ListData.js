@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { MdPerson } from 'react-icons/md';
 import Reader from '../Reader/Reader';
 
@@ -10,10 +10,6 @@ const ListData = ({ category, data }) => {
     image: data[0].artist.picture,
     activeItemId: data[0].id,
   });
-
-  useEffect(() => {
-    //    console.log(activeItem);
-  }, [activeItem]);
 
   return (
     <section className='search-results'>
@@ -60,12 +56,7 @@ const ListData = ({ category, data }) => {
         </ul>
       </div>
       <div className='lyric-reader'>
-        <Reader
-          artist={activeItem.artist}
-          title={activeItem.title}
-          mp3={activeItem.mp3}
-          image={activeItem.image}
-        />
+        <Reader {...activeItem} />
       </div>
     </section>
   );

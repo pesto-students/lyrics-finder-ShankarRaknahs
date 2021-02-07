@@ -4,7 +4,7 @@ const Profile = (user) => {
   return (
     <section className='profile'>
       <CgProfile className='image' size={70} />
-      <p className='name'>{user.name}</p>
+      <p className='name'>{user.firstName + ' ' + user.secondName}</p>
     </section>
   );
 };

@@ -350,7 +350,7 @@
     overflow-y: auto;
 }
 
-.lyrics-notfound{
+.error-response{
     padding: 5%;
     line-break: normal;
     top         : -1em;

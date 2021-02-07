@@ -3,12 +3,12 @@ import { MdHome } from 'react-icons/md';
 import { AiOutlineFileSearch } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
 
-const Navbar = ({ firstName, lastName }) => {
+const Navbar = (app) => {
   const [activeBtn, setActiveBtn] = React.useState('Home');
 
   React.useEffect(() => {
-    document.title = `${firstName} ${lastName} | ${activeBtn}`;
-  }, [activeBtn, firstName, lastName]);
+    document.title = `${app.firstName} ${app.secondName} | ${activeBtn}`;
+  }, [activeBtn, app.firstName, app.secondName]);
 
   return (
     <section className='navbar'>

@@ -6,14 +6,14 @@ import Profile from './components/Profile/Profile';
 
 const Layout = ({ children }) => {
   //userInfo object is for future use
-  const userInfo = { name: 'John Doe' };
-
+  const user = { firstName: 'John', secondName: 'Doe' };
+  const app = { firstName: 'Lyrics', secondName: 'Finder' };
   return (
     <section className='container'>
       <section className='primary'>
-        <Header firstName='Lyrics' lastName='Finder' />
-        <Navbar firstName='Lyrics' lastName='Finder' />
-        <Profile {...userInfo} />
+        <Header {...app} />
+        <Navbar {...app} />
+        <Profile {...user} />
         <Footer />
       </section>
       <section className='secondary'>{children}</section>
