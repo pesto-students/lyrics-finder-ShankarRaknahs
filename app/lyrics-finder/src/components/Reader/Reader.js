@@ -6,20 +6,13 @@ import CONFIG from '../../config/app.config';
 const Reader = (track) => {
   const [lyricObj, setLyricObj] = useState({
     lyrics: '',
-    isLoading: false,
+    isLoading: true,
     isError: false,
   });
   const [apiStatus, setApiStatus] = useState({
     code: CONFIG.HTTP_SUCCESS_CODE,
     statusText: '',
   });
-
-  useEffect(() => {
-    setLyricObj(
-      { isLoading: true },
-      debouncedCallback(`${track.artist}/${track.title}`)
-    );
-  }, [track]);
 
   const fetchData = (query) => {
     const url = new URL(query, CONFIG.LYRICS_API);
@@ -49,7 +42,14 @@ const Reader = (track) => {
   };
 
   const debounced = _.debounce(fetchData, CONFIG.LYRICS_DEBOUNCE_TIME);
-  const debouncedCallback = useCallback(debounced, []);
+  const debouncedCallback = useCallback(debounced, [debounced]);
+
+  useEffect(() => {
+    debouncedCallback(`${track.artist}/${track.title}`);
+    return function cleanup() {
+      setLyricObj({ isLoading: true });
+    };
+  }, [track]);
 
   return (
     <section className='reader'>
