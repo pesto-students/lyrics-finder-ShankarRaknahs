@@ -1,18 +1,24 @@
 import React from 'react';
-import { FcHome, FcSearch } from 'react-icons/fc';
+import { MdHome } from 'react-icons/md';
+import { AiOutlineFileSearch } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
 
-const Navbar = () => {
+const Navbar = (app) => {
   const [activeBtn, setActiveBtn] = React.useState('Home');
+
+  React.useEffect(() => {
+    document.title = `${app.firstName} ${app.secondName} | ${activeBtn}`;
+  }, [activeBtn, app.firstName, app.secondName]);
+
   return (
-    <section className='nav-actions'>
+    <section className='navbar'>
       <span>
         <Link to='/'>
           <button
             className={activeBtn === 'Home' ? 'btn active' : 'btn'}
             onClick={() => setActiveBtn('Home')}
           >
-            <FcHome size={20} />
+            <MdHome className='btn-icon' size={20} />
             <span>Home</span>
           </button>
         </Link>
@@ -23,7 +29,7 @@ const Navbar = () => {
             className={activeBtn === 'Search' ? 'btn active' : 'btn'}
             onClick={() => setActiveBtn('Search')}
           >
-            <FcSearch size={20} />
+            <AiOutlineFileSearch className='btn-icon' />
             <span>Search</span>
           </button>
         </Link>

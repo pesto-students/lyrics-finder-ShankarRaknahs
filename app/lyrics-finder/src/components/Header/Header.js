@@ -1,8 +1,8 @@
-const Header = () => {
+const Header = (app) => {
   return (
     <section className='header'>
-      <p className='firsthalf'> Lyrics</p>
-      <p className='secondhalf'> Finder</p>
+      <p className='firstname'> {app.firstName}</p>
+      <p className='secondname'> {app.secondName}</p>
     </section>
   );
 };
