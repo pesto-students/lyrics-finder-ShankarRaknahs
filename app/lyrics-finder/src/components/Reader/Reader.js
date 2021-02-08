@@ -2,6 +2,8 @@ import { useCallback, useEffect, useState } from 'react';
 import _ from 'lodash';
 import getData from '../../api/getData';
 import CONFIG from '../../config/app.config';
+import AudioPlayer from 'react-h5-audio-player';
+import 'react-h5-audio-player/lib/styles.css';
 
 const Reader = (track) => {
   const [lyricObj, setLyricObj] = useState({
@@ -61,11 +63,9 @@ const Reader = (track) => {
           <p className='title'> {track.title}</p>
           <p className='artist'> {track.artist}</p>
         </div>
-        <div className='reader-player'>
-          <audio controls>
-            <source src={track.mp3} />
-          </audio>
-        </div>
+      </div>
+      <div className='reader-player'>
+        <AudioPlayer src={track.mp3} layout='horizontal' />
       </div>
       {apiStatus.code === CONFIG.HTTP_SUCCESS_CODE ? (
         <div className='reader-section'>
