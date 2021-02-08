@@ -12,10 +12,10 @@ import toJSON from 'enzyme-to-json';
 Enzyme.configure({ adapter: new Adapter() });
 const { mount } = Enzyme;
 
-describe('<Header />', () => {
+describe('<Profile />', () => {
   it('render correctly (snapshot)', () => {
     const user = { firstName: 'John', secondName: 'Doe' };
-    const tree = renderer.create(<Profile {...user} />).toJSON();
+    const tree = renderer.create(<Profile {...user} />);
     expect(toJSON(tree)).toMatchSnapshot();
   });
 

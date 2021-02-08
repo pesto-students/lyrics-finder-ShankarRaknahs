@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SearchQuery /> render correctly (snapshot) 1`] = `undefined`;
+
+exports[`<SearchQuery /> render correctly using Enzyme (snapshot) 1`] = `
+<SearchQuery>
+  <section
+    className="search"
+  >
+    <div
+      className="query"
+    >
+      <input
+        className="search-bar"
+        onChange={[Function]}
+        placeholder="Search for Albums or Songs"
+        type="text"
+      />
+    </div>
+    <div
+      className="result"
+    />
+  </section>
+</SearchQuery>
+`;

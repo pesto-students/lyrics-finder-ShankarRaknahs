@@ -12,9 +12,9 @@ import toJSON from 'enzyme-to-json';
 Enzyme.configure({ adapter: new Adapter() });
 const { mount } = Enzyme;
 
-describe('<Header />', () => {
+describe('<Footer />', () => {
   it('render correctly (snapshot)', () => {
-    const tree = renderer.create(<Footer />).toJSON();
+    const tree = renderer.create(<Footer />);
     expect(toJSON(tree)).toMatchSnapshot();
   });
 

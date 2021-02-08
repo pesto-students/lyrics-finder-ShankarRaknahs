@@ -15,7 +15,7 @@ const { mount } = Enzyme;
 describe('<Header />', () => {
   it('render correctly (snapshot)', () => {
     const app = { firstName: 'Lyrics', secondName: 'Finder' };
-    const tree = renderer.create(<Header {...app} />).toJSON();
+    const tree = renderer.create(<Header {...app} />);
     expect(toJSON(tree)).toMatchSnapshot();
   });
 
