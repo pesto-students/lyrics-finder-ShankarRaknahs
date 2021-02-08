@@ -301,19 +301,24 @@
 .reader .title-section{
     display: flex;
     flex-direction: row;
-    padding: 15px 70px 24px 33.8px;
+    align-content: space-between;
+    /* padding: 15px 70px 24px 33.8px; */
+    padding: 2%;
     box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.06);
     background-color: #212f3c;
     border: solid 10px #ffffff;
 }
 
 .cover{
-    margin-top: 3%;
+    margin-top: 1%;
+    object-fit: contain;
+    margin-right: 24px;
 }
 
-.reader .title-section .reader-title{
+.reader-title{
+    display: inline-block;
     padding-left: 2%;
-    font-size: 18px;
+    font-size: 22px;
     color: #999999;
     background-color: #212f3c;
 }
@@ -330,10 +335,10 @@
 }
 
 .reader-player{
+    background-color:#1B252F;
+    width: 100%;
     display: flex;
-    padding-left: 1%;
-    margin-left: 5%;
-    margin-top: 3%;
+    /* padding-left: 1% */
 }
 
 .lyrics{
@@ -344,7 +349,7 @@
     font-weight : bold;
     color: #000000;
     line-height: 2.25;
-    max-height: 455px;
+    max-height: 392px;
     max-width: 600px;
     overflow-x: auto;
     overflow-y: auto;

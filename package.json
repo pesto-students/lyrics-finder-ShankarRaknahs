@@ -9,5 +9,6 @@
   },
   "devDependencies": {
     "serve": "^11.3.2"
-  }
+  },
+  "dependencies": {}
 }
