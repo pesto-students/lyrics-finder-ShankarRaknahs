@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Header /> render correctly (snapshot) 1`] = `undefined`;
+
+exports[`<Header /> render correctly using Enzyme (snapshot) 1`] = `
+<Header
+  firstName="Lyrics"
+  secondName="Finder"
+>
+  <section
+    className="header"
+  >
+    <p
+      className="firstname"
+    >
+       
+      Lyrics
+    </p>
+    <p
+      className="secondname"
+    >
+       
+      Finder
+    </p>
+  </section>
+</Header>
+`;
