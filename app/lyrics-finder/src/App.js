@@ -9,8 +9,10 @@ function App() {
     <section>
       <BrowserRouter>
         <Switch>
-          <RouteWrapper path='/search' component={<SearchView />} />
-          <RouteWrapper path='/' component={<HomeView />} />
+          //! Commenting for now, will be added during Home page implementation
+          {/* <RouteWrapper path='/search' component={<SearchView />} />
+          <RouteWrapper path='/' component={<HomeView />} /> */}
+          <RouteWrapper path='/' component={<SearchView />} />
         </Switch>
       </BrowserRouter>
     </section>

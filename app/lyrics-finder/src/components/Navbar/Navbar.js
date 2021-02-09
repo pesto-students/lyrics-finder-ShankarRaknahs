@@ -12,7 +12,7 @@ const Navbar = (app) => {
 
   return (
     <section className='navbar'>
-      <span>
+      {/* <span>
         <Link to='/'>
           <button
             className={activeBtn === 'Home' ? 'btn active' : 'btn'}
@@ -22,8 +22,8 @@ const Navbar = (app) => {
             <span>Home</span>
           </button>
         </Link>
-      </span>
-      <span>
+      </span> */}
+      {/* <span>
         <Link to='/search'>
           <button
             className={activeBtn === 'Search' ? 'btn active' : 'btn'}
@@ -31,6 +31,18 @@ const Navbar = (app) => {
           >
             <AiOutlineFileSearch className='btn-icon' />
             <span>Search</span>
+          </button>
+        </Link>
+      </span> */}
+
+      <span>
+        <Link to='/'>
+          <button
+            className={'btn active'}
+            onClick={() => setActiveBtn('Search')}
+          >
+            <AiOutlineFileSearch className='btn-icon' />
+            <span>Library</span>
           </button>
         </Link>
       </span>
