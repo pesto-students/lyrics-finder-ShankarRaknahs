@@ -60,7 +60,7 @@ const SearchQuery = () => {
           {searchObj.isLoading ? (
             <p className='loader'> Loading ...</p>
           ) : searchObj.data.length > 0 ? (
-            <ListData category='#Search Results' data={searchObj.data} />
+            <ListData category='#Your Songs' data={searchObj.data} />
           ) : searchObj.query !== '' ? (
             <div> {CONFIG.NO_RESULT_FOUND} </div>
           ) : null}
