@@ -7,7 +7,8 @@ const Navbar = (app) => {
   const [activeBtn, setActiveBtn] = React.useState('Home');
 
   React.useEffect(() => {
-    document.title = `${app.firstName} ${app.secondName} | ${activeBtn}`;
+    // document.title = `${app.firstName} ${app.secondName} | ${activeBtn}`;
+    document.title = `${app.firstName} ${app.secondName}`;
   }, [activeBtn, app.firstName, app.secondName]);
 
   return (
