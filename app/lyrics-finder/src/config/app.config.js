@@ -12,6 +12,11 @@ const config = {
   HTTP_SUCCESS_CODE: 200,
   NO_RESULT_FOUND:
     'No tracks found for the keyword, Please try some other keywords',
+  FILTER_CATEGORIES: [
+    { id: 1, name: '#Trending', keyword: 'trending' },
+    { id: 2, name: '#Recently viewed', keyword: 'recent' },
+    { id: 3, name: '#Top Hits', keyword: 'hits' },
+  ],
 };
 
 export default config;

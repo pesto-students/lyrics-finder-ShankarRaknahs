@@ -5,6 +5,7 @@
     display: flex;
 }
 .primary{
+    flex:1;
     padding: 1%;
     background-color: #1B252F;
     color: #999999;
@@ -12,14 +13,14 @@
 .secondary{
     padding: 1%;
     display: flex;
-    flex: 1;
+    flex: 7;
     background-color: #212F3C;
     color: #999999;
 }
 
 .header{
     font-size: xx-large;
-    font-weight: bold;
+    font-weight: normal;
     margin-top: -1em;
 }
 
@@ -364,4 +365,35 @@
     line-height: 2.25;
     max-height: 455px;
     overflow-y: auto;
+}
+
+.filter-list{
+    list-style-type: none;
+    display: flex;
+    /* flex-direction: column; */
+}
+.filter-btn {
+    margin-right: 1vh;
+    padding: 5px 11px 5px 13px;
+    border: solid 1px #ecba2d;
+    border-radius: 10px;
+    background-color: #212F3C;
+    color: #ecba2d;
+    cursor: pointer;
+    font-weight: bolder;
+}
+.filter-btn:hover{
+    background-color: #ecba2d;
+    color: #ffffff;
+}
+.filter-btn-active {
+    margin-right: 1vh;
+    padding: 5px 11px 5px 13px;
+    border: solid 1px #ecba2d;
+    border-radius: 10px;
+    background-color: #ecba2d;
+    color: #ffffff;
+    cursor: pointer;
+    font-weight: bolder;
+    /* border: solid 1px #ffffff; */
 }

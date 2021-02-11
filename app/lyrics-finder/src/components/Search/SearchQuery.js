@@ -3,6 +3,7 @@ import ListData from '../List/ListData';
 import _ from 'lodash';
 import getData from '../../api/getData';
 import CONFIG from '../../config/app.config';
+import Filters from '../Filters/Filters';
 
 const SearchQuery = () => {
   const [searchObj, setSearchObj] = useState({
@@ -63,7 +64,9 @@ const SearchQuery = () => {
             <ListData category='#Your Songs' data={searchObj.data} />
           ) : searchObj.query !== '' ? (
             <div> {CONFIG.NO_RESULT_FOUND} </div>
-          ) : null}
+          ) : (
+            <Filters filterCategories={CONFIG.FILTER_CATEGORIES} />
+          )}
         </div>
       ) : (
         <pre className='error-response'>{` ${CONFIG.ERROR_MESSAGES.apiError} 
