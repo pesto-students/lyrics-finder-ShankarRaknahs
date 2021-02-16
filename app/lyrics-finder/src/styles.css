@@ -3,25 +3,19 @@
 }
 .container{
     display: flex;
+    height: 100vh;
+    width: 100vw;
 }
 .primary{
-    flex:1;
-    padding: 1%;
+    width: 10vw;
+    padding: 0.5vw;
     background-color: #1B252F;
     color: #999999;
-}
-.secondary{
-    padding: 1%;
-    display: flex;
-    flex: 7;
-    background-color: #212F3C;
-    color: #999999;
+    /* justify-content: space-between; */
 }
 
 .header{
     font-size: xx-large;
-    font-weight: normal;
-    margin-top: -1em;
 }
 
 .header .firstname{
@@ -31,26 +25,23 @@
 .header .secondname{
     text-align: right;
     color: #42baeb;
-    margin-top: -1em;
+    margin-top: -3vh;
 }
 .navbar{
-    display: flex;
     flex-direction: column;
 }
 
 .btn{
-    width: 30vh;
+    width: 15vw;
     float: left;
     height: 13vh;
-    margin: 10px;
-    margin-right: -55px;
+    margin: 1vh;
     color: #999999;
     font-size: larger;
     border: none;
-    border-radius: 50px;
+    border-radius: 50vw;
     background-color: #1B252F;
     cursor: pointer;
-    justify-content: space-between;
 }
 
 .active, .btn:hover span {
@@ -63,7 +54,7 @@
 }
 
 .btn span{
-    margin-left: 3%;
+    margin-left: 0.3vh;
 }
 .btn .btn-icon{
     size: 40
@@ -76,8 +67,8 @@
 
 .profile{
     text-align: center;
-    display: block;
-    margin-top: 32.5vh;
+    /* display: block; */
+    margin-top: 50vh;
     margin-left: auto;
     margin-right: auto;
 }
@@ -92,35 +83,36 @@
     display: flex;
 }
 .social{
-    margin-top: 15%;
+    margin-top: 1vh;
     margin-left: auto;
     margin-right: auto;
     color: #999999;
 }
-.social .image{
-    padding: 10px;
-}
-
 .copyright{
     text-align: center;
+    font-size: small;
 }
 
-.search{
-    display: flex;
-    flex-direction: column;
-    flex: 1
+.secondary{
+    padding: 0.5vw;
+    width: 90vw;
+    background-color: #212F3C;
+    color: #999999;
 }
+
+
 .search .query{
-    width: 50%;
-    margin-bottom: 2%;
+    /* width: 50; */
+    /* width: 50vw; */
+    margin: 2vh;
     color: #eceff4;
 }
 
 .search .result{
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    height: 540px;
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* flex: 1; */
+    /* height: 80vh; */
 }
 
 /* .search .result{
@@ -131,36 +123,37 @@
 } */
 
 .search-bar{
-    width: 80%;
-    height: 35px;
+    /* width: 80%; */
+    width: 35vw;
+    height: 4vh;
     margin: 9.8px 0 0;
     border: none;
-    border-radius: 20px;
+    border-radius: 2vh;
     outline: none;
     font-size: larger;
-    padding-left: 20px;
+    padding-left: 2vh;
 }
 
 .list-data{
-    width: 50%;
+    width: 45vw;
 }   
 
 .list-data ul{
-    max-height: 540px;
+    max-height: 70vh;
     overflow-y: scroll;
 }
 
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 1.3vh;
 }
 
 ::-webkit-scrollbar-track {
     background-color: #212f3c;
 } 
 ::-webkit-scrollbar-thumb {
-    height: 40%;
+    height: 30vh;
     background-color: #666666;
-    opacity: 10;
+    opacity: 1vh;
 } 
 
 ::-webkit-scrollbar-thumb:hover {
@@ -168,22 +161,18 @@
 }
 
 .lyric-reader{
-    width: 60%;
+    width: 43vw;
+    height: 94vh;
     background-color: #eceff4;
-    margin-left: 0;
-    margin-top: -6.9%;
-    margin-right: -1.2%;
-    margin-bottom: -2%;
+    margin-top: -10vh;
 }
-
-
 .category{
-    margin-bottom: 8%;
+    margin-bottom: 6vh;
 }
 
 .category .header{
     color: #999999;
-    width: 30%;
+    width: 15vw;
     margin: 30px 178px 19.5px 0.3px;
     padding: 5px 14px 7px 11px;
     border-radius: 17px;
@@ -192,42 +181,35 @@
     font-size: 16px;
 }
 .category .ruler{
-    width: 70%;
+    width: 60vh;
     height: 0;
-    margin-top: -7.5%;
-    margin-left: 28%;
+    margin-top: -4.5vh;
+    margin-left: 18vh;
     border: solid 1px #0C1D2E;
 }
 .column{
-   display: flex;
+   /* display: flex; */
 }
 .list{
     display: flex;
-    width: 87%;
+    width: 63vh;
     list-style-type: none;
     color: #999999;
-    /* font-family: Averta; */
-    letter-spacing: normal;
-    font-style: normal;
     line-height: 1.25;
     padding: 10px;
     text-align: left;
-    font-stretch: normal;
     border-bottom: solid 0.001px #666666;
 }
 
 .list-active{
     display: flex;
-    width: 87%;
+    width: 63vh;
     list-style-type: none;
     color: #ffffff;
     background-color: #1b252f;
-    letter-spacing: normal;
-    font-style: normal;
     line-height: 1.25;
     padding: 10px;
     text-align: left;
-    font-stretch: normal;
     border-radius: 10px;
     border: none;
 }
@@ -236,8 +218,6 @@
     /* background-color: #1b252f; */
     color: #ffffff;
     cursor: pointer;
-    border-radius: 10px;
-    /* border: none; */
 }
 
 .list-cover{
@@ -247,30 +227,31 @@
 }
 
 .list-details{
-    width: 100%;
+    /* width: ; */
+    width: 40vh;
 }
 
 .list-title{
     margin: 0 0px 13px;
-    font-size: 24px;
+    font-size: x-large;
     font-weight: 600;
 }
 .list-icon{
-    size: 20;
+    size: 80;
 }
 .list-artist{
-    margin-left: 2%;
-    font-size: 15px;
+    margin-left: 0.5vh;
+    font-size: large;
     font-weight: 400;
 }
 
 .list-album{
-    width: 100%;
-    margin-top: 5%;
-    margin-bottom: 5%;
-    height: 15px;
-    font-size: 15px;
-    font-weight: normal;
+    /* width: 100%; */
+    margin-top: 1vh;
+    margin-bottom: 0.5vh;
+    /* height: 15px; */
+    font-size: medium;
+    /* font-weight: normal; */
     /* white-space: nowrap; */
     overflow: hidden;
     text-overflow: ellipsis;
@@ -279,31 +260,23 @@
 
 
 .list .divider{
-    height: 1.1px;
-    width: 100%;
-    margin-left: -2%;
-    margin-top: 4%;
-    margin-bottom: 6%;
+    height: 0.01vh;
     border: solid 0.001px #666666;
-}
-
-.list .divider:hover{
-    border: none;
 }
 
 .search-results {
     display: flex;
-    height: 600px
 }
 
 .reader{
+    color: #999999;
 }
 .reader .title-section{
     display: flex;
     flex-direction: row;
-    align-content: space-between;
+    /* align-content: space-between; */
     /* padding: 15px 70px 24px 33.8px; */
-    padding: 2%;
+    padding: 1vh;
     box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.06);
     background-color: #212f3c;
     border: solid 10px #ffffff;
@@ -312,20 +285,16 @@
 .cover{
     margin-top: 1%;
     object-fit: contain;
-    margin-right: 24px;
+    margin-right: 2vh;
 }
 
 .reader-title{
-    display: inline-block;
-    padding-left: 2%;
-    font-size: 22px;
-    color: #999999;
+    font-size: larger;
     background-color: #212f3c;
 }
 
 .artist{
-    color: #999999;
-    font-size: 15px;
+    font-size: medium;
 }
 
 .reader .reader-section{
@@ -335,42 +304,36 @@
 }
 
 .reader-player{
-    background-color:#1B252F;
-    width: 100%;
-    display: flex;
+    /* background-color:#1B252F; */
+    /* width: 100%; */
+    /* display: flex; */
     /* padding-left: 1% */
 }
 
 .lyrics{
-    padding: 5%;
-    line-break: normal;
-    top         : -1em;
+    padding: 2vh;
     font-style  : italic;
     font-weight : bold;
     color: #000000;
     line-height: 2.25;
-    max-height: 392px;
-    max-width: 600px;
+    max-height: 60vh;
     overflow-x: auto;
     overflow-y: auto;
 }
 
 .error-response{
-    padding: 5%;
-    line-break: normal;
-    top         : -1em;
+    padding: 2vh;
     font-style  : italic;
     font-weight : bold;
     color: #ec1c24;
     line-height: 2.25;
-    max-height: 455px;
+    max-height: 60vh;
     overflow-y: auto;
 }
 
 .filter-list{
     list-style-type: none;
     display: flex;
-    /* flex-direction: column; */
 }
 .filter-btn {
     margin-right: 1vh;
