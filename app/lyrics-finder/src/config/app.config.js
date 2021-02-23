@@ -13,9 +13,9 @@ const config = {
   NO_RESULT_FOUND:
     'No tracks found for the keyword, Please try some other keywords',
   FILTER_CATEGORIES: [
-    { id: 1, name: '#Recently viewed', keyword: 'recent' },
-    { id: 2, name: '#Trending', keyword: 'trending' },
-    { id: 3, name: '#Top Hits', keyword: 'hits' },
+    { id: 1, name: '#Top Hits', keyword: 'hits' },
+    { id: 2, name: '#Recently viewed', keyword: 'recent' },
+    { id: 3, name: '#Trending', keyword: 'trend' },
   ],
 };
 
